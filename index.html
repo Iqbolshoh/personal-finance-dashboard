@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finance Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h1>💰 Personal Finance Dashboard</h1>
+
+  <div class="grid">
+    <div class="card balance">
+      <h3>Balans</h3>
+      <div class="value" id="balance">0 so'm</div>
+    </div>
+    <div class="card income">
+      <h3>Daromad</h3>
+      <div class="value" id="income">0 so'm</div>
+    </div>
+    <div class="card expense">
+      <h3>Xarajat</h3>
+      <div class="value" id="expense">0 so'm</div>
+    </div>
+  </div>
+
+  <div class="main-grid">
+    <div class="panel">
+      <h2>Yangi tranzaksiya</h2>
+      <form id="tx-form">
+        <input type="text" id="desc" placeholder="Tavsif" required>
+        <input type="number" id="amount" placeholder="Summa" required>
+        <select id="type">
+          <option value="income">Daromad</option>
+          <option value="expense">Xarajat</option>
+        </select>
+        <select id="category">
+          <option>Oziq-ovqat</option>
+          <option>Transport</option>
+          <option>Ish haqi</option>
+          <option>Kommunal</option>
+          <option>Ko'ngilochar</option>
+          <option>Boshqa</option>
+        </select>
+        <button type="submit">Qo'shish</button>
+      </form>
+
+      <h2 style="margin-top:10px;">Tarix</h2>
+      <div class="tx-list" id="tx-list">
+        <div class="empty">Hozircha tranzaksiya yo'q</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Kategoriya bo'yicha xarajatlar</h2>
+      <canvas id="chart"></canvas>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, sans-serif; }
+body { background:#0f1117; color:#e5e7eb; min-height:100vh; padding:24px; }
+.container { max-width:1100px; margin:0 auto; }
+h1 { font-size:28px; margin-bottom:20px; }
+
+.grid { display:grid; grid-template-columns: repeat(3,1fr); gap:16px; margin-bottom:24px; }
+.card { background:#1a1d29; border-radius:14px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,.3); }
+.card h3 { font-size:13px; color:#9ca3af; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;}
+.card .value { font-size:26px; font-weight:700; }
+.balance .value { color:#60a5fa; }
+.income .value { color:#34d399; }
+.expense .value { color:#f87171; }
+
+.main-grid { display:grid; grid-template-columns: 1.2fr 1fr; gap:16px; }
+@media(max-width:900px){ .main-grid{grid-template-columns:1fr;} .grid{grid-template-columns:1fr;} }
+
+.panel { background:#1a1d29; border-radius:14px; padding:20px; }
+.panel h2 { font-size:18px; margin-bottom:16px; }
+
+form { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:16px; }
+input, select, button {
+  padding:10px 12px; border-radius:8px; border:1px solid #2d3142;
+  background:#252a3a; color:#e5e7eb; font-size:14px;
+}
+input { flex:1; min-width:100px; }
+button { background:#3b82f6; border:none; cursor:pointer; font-weight:600; transition:.2s; }
+button:hover { background:#2563eb; }
+
+.tx-list { max-height:340px; overflow-y:auto; display:flex; flex-direction:column; gap:8px; }
+.tx-item { display:flex; justify-content:space-between; align-items:center; background:#21263a; padding:10px 14px; border-radius:8px; }
+.tx-item .left { display:flex; flex-direction:column; }
+.tx-item .left strong { font-size:14px; }
+.tx-item .left span { font-size:12px; color:#9ca3af; }
+.tx-amount.income { color:#34d399; font-weight:700; }
+.tx-amount.expense { color:#f87171; font-weight:700; }
+.del-btn { background:none; border:none; color:#6b7280; cursor:pointer; font-size:16px; padding:0 0 0 10px; }
+.del-btn:hover { color:#f87171; }
+
+.empty { text-align:center; color:#6b7280; padding:30px; font-size:14px; }
