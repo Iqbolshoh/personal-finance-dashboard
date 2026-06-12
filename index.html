@@ -4,23 +4,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Finance Dashboard</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2360a5fa' stroke-width='2'><circle cx='12' cy='12' r='10'/><path d='M12 6v6l4 2'/></svg>">
 <link rel="stylesheet" href="style.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 </head>
 <body>
 <div class="container">
-  <h1>💰 Personal Finance Dashboard</h1>
+
+  <h1>
+    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="1" x2="12" y2="23"/>
+      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+    </svg>
+    Finance Dashboard
+  </h1>
 
   <div class="grid">
     <div class="card balance">
+      <div class="card-icon icon-balance">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+      </div>
       <h3>Balans</h3>
       <div class="value" id="balance">0 so'm</div>
     </div>
+
     <div class="card income">
+      <div class="card-icon icon-income">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+      </div>
       <h3>Daromad</h3>
       <div class="value" id="income">0 so'm</div>
     </div>
+
     <div class="card expense">
+      <div class="card-icon icon-expense">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg>
+      </div>
       <h3>Xarajat</h3>
       <div class="value" id="expense">0 so'm</div>
     </div>
@@ -44,7 +63,10 @@
           <option>Ko'ngilochar</option>
           <option>Boshqa</option>
         </select>
-        <button type="submit">Qo'shish</button>
+        <button type="submit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Qo'shish
+        </button>
       </form>
 
       <h2 style="margin-top:10px;">Tarix</h2>
@@ -58,6 +80,7 @@
       <canvas id="chart"></canvas>
     </div>
   </div>
+
 </div>
 
 <script src="script.js"></script>
