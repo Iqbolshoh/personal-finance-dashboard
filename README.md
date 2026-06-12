@@ -39,7 +39,7 @@ personal-finance-dashboard/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Iqbolshoh/fintrack.git
+git clone https://github.com/Iqbolshoh/personal-finance-dashboard.git
 cd fintrack
 ```
 
